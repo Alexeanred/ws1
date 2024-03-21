@@ -12,21 +12,21 @@
     <title>Create batch translation job :: AWS Translate</title>
 
     
-    <link href="/ws1/css/nucleus.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/fontawesome-all.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hybrid.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/featherlight.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/perfect-scrollbar.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/auto-complete.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/atom-one-dark-reasonable.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/theme.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hugo-theme.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/nucleus.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/fontawesome-all.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hybrid.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/featherlight.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/perfect-scrollbar.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/auto-complete.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/atom-one-dark-reasonable.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/theme.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hugo-theme.css?1711033591" rel="stylesheet">
     
-    <link href="/ws1/css/theme-workshop.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/theme-workshop.css?1711033591" rel="stylesheet">
     
     
 
-    <script src="/ws1/js/jquery-3.3.1.min.js?1711031470"></script>
+    <script src="/ws1/js/jquery-3.3.1.min.js?1711033591"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ws1/js/lunr.min.js?1711031470"></script>
-<script type="text/javascript" src="/ws1/js/auto-complete.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/lunr.min.js?1711033591"></script>
+<script type="text/javascript" src="/ws1/js/auto-complete.js?1711033591"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexeanred.github.io\/ws1\/";
     
 </script>
-<script type="text/javascript" src="/ws1/js/search.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/search.js?1711033591"></script>
 
     
   </div>
@@ -1162,12 +1162,12 @@
 
 	<ol>
 <li>In the console, in the search bar, enter <code>Translate</code>.
-<img alt="bathjob" src="/images/3.connect/001-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/001-batchTranslate.png"></li>
 <li>In the Translate interface:
 <ul>
 <li>Select <strong>Batch translation</strong>.</li>
 <li>Select the <strong>Create job</strong> button.
-<img alt="bathjob" src="/images/3.connect/002-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/002-batchTranslate.png"></li>
 </ul>
 </li>
 <li>In <strong>Create Translate Job</strong>:
@@ -1175,7 +1175,7 @@
 <li>In the <strong>Name</strong> section, enter <code>MyTranslateJob</code>.</li>
 <li>Select source language: <strong>English</strong>.</li>
 <li>Select target language: <strong>Vietnamese</strong>.
-<img alt="bathjob" src="/images/3.connect/003-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/003-batchTranslate.png"></li>
 </ul>
 </li>
 <li>In the Input data section:
@@ -1185,7 +1185,7 @@
 <li>Select File format: <strong>Plain text (.txt)</strong>.</li>
 <li>Access the directory path in the output bucket: <strong>s3://translate-job-batch-output-150903/output/</strong>.</li>
 <li>Your data is encrypted by default.
-<img alt="bathjob" src="/images/3.connect/005-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/005-batchTranslate.png"></li>
 </ul>
 </li>
 <li>We must grant Translate permission to access S3 buckets:
@@ -1195,22 +1195,22 @@
 <li>If you want all buckets, select <strong>Any S3 bucket</strong>.</li>
 <li>Name the role name: <code>AllowAccessS3InputOutput</code></li>
 <li>Select the <strong>Create job</strong> button.
-<img alt="bathjob" src="/images/3.connect/006-batchTranslate.png">
+<img alt="bathjob" src="/ws1/images/3.connect/006-batchTranslate.png">
 
 <div class="notices warning" ><p>If you have selected <strong>Create job</strong> and get this error, it is because you do not have a file in the raw directory of the input bucket. You must upload the file to be translated before creating a job.</p>
 </div>
 
-<img alt="bathjob" src="/images/3.connect/007-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/007-batchTranslate.png"></li>
 </ul>
 </li>
 <li>Access the input bucket and go to the raw folder, download the .txt files you want to translate.
-<img alt="bathjob" src="/images/3.connect/008-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/008-batchTranslate.png"></li>
 <li>If you have uploaded the file and still have the error, it is because you have previously created an IAM Role with that name. To <strong>Create job</strong> successfully, you need to name the role differently or refresh the page to Translate knows the role exists and can be used.
-<img alt="bathjob" src="/images/3.connect/009-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/009-batchTranslate.png"></li>
 <li>After you select <strong>Create job</strong>, the <strong>job will be in progress</strong> status until the job is completed.
-<img alt="bathjob" src="/images/3.connect/010-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/010-batchTranslate.png"></li>
 <li>You can see the status and configurations we have made when you click.
-<img alt="bathjob" src="/images/3.connect/011-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/011-batchTranslate.png"></li>
 </ol>
 
 <div class="notices note" ><p>Amazon Translate does not charge you if you select the same language for &ldquo;source language&rdquo; and &ldquo;target language&rdquo;. If you select the &ldquo;auto&rdquo; mode that automatically detects the language, you will be charged for that portion.</p>
@@ -1771,19 +1771,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ws1/js/clipboard.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711031470"></script>
-    <script src="/ws1/js/jquery.sticky.js?1711031470"></script>
-    <script src="/ws1/js/featherlight.min.js?1711031470"></script>
-    <script src="/ws1/js/highlight.pack.js?1711031470"></script>
+    <script src="/ws1/js/clipboard.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711033591"></script>
+    <script src="/ws1/js/jquery.sticky.js?1711033591"></script>
+    <script src="/ws1/js/featherlight.min.js?1711033591"></script>
+    <script src="/ws1/js/highlight.pack.js?1711033591"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711031470"></script>
-    <script src="/ws1/js/learn.js?1711031470"></script>
-    <script src="/ws1/js/hugo-learn.js?1711031470"></script>
+    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711033591"></script>
+    <script src="/ws1/js/learn.js?1711033591"></script>
+    <script src="/ws1/js/hugo-learn.js?1711033591"></script>
 
-    <link href="/ws1/mermaid/mermaid.css?1711031470" rel="stylesheet" />
-    <script src="/ws1/mermaid/mermaid.js?1711031470"></script>
+    <link href="/ws1/mermaid/mermaid.css?1711033591" rel="stylesheet" />
+    <script src="/ws1/mermaid/mermaid.js?1711033591"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

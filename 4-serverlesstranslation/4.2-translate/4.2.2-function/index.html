@@ -12,21 +12,21 @@
     <title>Configure Translate function :: AWS Translate</title>
 
     
-    <link href="/ws1/css/nucleus.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/fontawesome-all.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hybrid.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/featherlight.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/perfect-scrollbar.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/auto-complete.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/atom-one-dark-reasonable.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/theme.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hugo-theme.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/nucleus.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/fontawesome-all.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hybrid.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/featherlight.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/perfect-scrollbar.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/auto-complete.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/atom-one-dark-reasonable.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/theme.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hugo-theme.css?1711033591" rel="stylesheet">
     
-    <link href="/ws1/css/theme-workshop.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/theme-workshop.css?1711033591" rel="stylesheet">
     
     
 
-    <script src="/ws1/js/jquery-3.3.1.min.js?1711031470"></script>
+    <script src="/ws1/js/jquery-3.3.1.min.js?1711033591"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ws1/js/lunr.min.js?1711031470"></script>
-<script type="text/javascript" src="/ws1/js/auto-complete.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/lunr.min.js?1711033591"></script>
+<script type="text/javascript" src="/ws1/js/auto-complete.js?1711033591"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexeanred.github.io\/ws1\/";
     
 </script>
-<script type="text/javascript" src="/ws1/js/search.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/search.js?1711033591"></script>
 
     
   </div>
@@ -1219,7 +1219,7 @@
 <li>Create a function to translate the paragraph by calling the translate API</li>
 <li>The lambda_handler function is used to receive events and process them so that the results appear in the <strong>translated bucket</strong>.</li>
 <li>Then, select the <strong>Deploy</strong> button to have the function update to the latest code.
-<img alt="translatefunc" src="/images/4.s3/004-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/004-translate.png"></li>
 </ul>
 </li>
 </ul>
@@ -1228,7 +1228,7 @@
 <ul>
 <li>Select <strong>Environment variables</strong>.</li>
 <li>Select the <strong>Edit</strong> button.
-<img alt="translatefunc" src="/images/4.s3/005-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/005-translate.png"></li>
 </ul>
 </li>
 <li>In Environment variables:
@@ -1237,7 +1237,7 @@
 <li>In <strong>Key</strong>: enter <code>OutputBucket</code>.</li>
 <li>In <strong>Value</strong>: enter <code>translated-bucket-&lt;your_id&gt;</code>.</li>
 <li>Select the <strong>Save</strong> button.
-<img alt="translatefunc" src="/images/4.s3/006-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/006-translate.png"></li>
 </ul>
 </li>
 <li>To test the newly created function:
@@ -1270,18 +1270,18 @@
 </code></pre><ul>
 <li>Above: <strong>bucket name</strong> is the name of the bucket we have files that have gone through the batching process (batched bucket), <strong>object key</strong> is a file in that bucket.</li>
 <li>Select the <strong>Save</strong> button and then you can test.
-<img alt="translatefunc" src="/images/4.s3/007-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/007-translate.png"></li>
 </ul>
 <ol start="5">
 <li>After testing, you can access cloudwatch to view the log of the request we sent to test:
 <ul>
 <li>Select <strong>Monitor</strong>.</li>
 <li>Select <strong>View Cloudwatch logs</strong>.
-<img alt="translatefunc" src="/images/4.s3/008-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/008-translate.png"></li>
 </ul>
 </li>
 <li>Select <strong>log streams</strong> to view the log and refresh if there is a new log sent in.
-<img alt="translatefunc" src="/images/4.s3/009-translate.png"></li>
+<img alt="translatefunc" src="/ws1/images/4.s3/009-translate.png"></li>
 </ol>
 <p><strong>Hooray!!! You have finished configuring the translate function.</strong></p>
 
@@ -1838,19 +1838,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ws1/js/clipboard.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711031470"></script>
-    <script src="/ws1/js/jquery.sticky.js?1711031470"></script>
-    <script src="/ws1/js/featherlight.min.js?1711031470"></script>
-    <script src="/ws1/js/highlight.pack.js?1711031470"></script>
+    <script src="/ws1/js/clipboard.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711033591"></script>
+    <script src="/ws1/js/jquery.sticky.js?1711033591"></script>
+    <script src="/ws1/js/featherlight.min.js?1711033591"></script>
+    <script src="/ws1/js/highlight.pack.js?1711033591"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711031470"></script>
-    <script src="/ws1/js/learn.js?1711031470"></script>
-    <script src="/ws1/js/hugo-learn.js?1711031470"></script>
+    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711033591"></script>
+    <script src="/ws1/js/learn.js?1711033591"></script>
+    <script src="/ws1/js/hugo-learn.js?1711033591"></script>
 
-    <link href="/ws1/mermaid/mermaid.css?1711031470" rel="stylesheet" />
-    <script src="/ws1/mermaid/mermaid.js?1711031470"></script>
+    <link href="/ws1/mermaid/mermaid.css?1711033591" rel="stylesheet" />
+    <script src="/ws1/mermaid/mermaid.js?1711033591"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

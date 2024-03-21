@@ -12,21 +12,21 @@
     <title>Tạo batch translation job :: AWS Translate</title>
 
     
-    <link href="/ws1/css/nucleus.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/fontawesome-all.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hybrid.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/featherlight.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/perfect-scrollbar.min.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/auto-complete.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/atom-one-dark-reasonable.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/theme.css?1711031470" rel="stylesheet">
-    <link href="/ws1/css/hugo-theme.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/nucleus.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/fontawesome-all.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hybrid.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/featherlight.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/perfect-scrollbar.min.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/auto-complete.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/atom-one-dark-reasonable.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/theme.css?1711033591" rel="stylesheet">
+    <link href="/ws1/css/hugo-theme.css?1711033591" rel="stylesheet">
     
-    <link href="/ws1/css/theme-workshop.css?1711031470" rel="stylesheet">
+    <link href="/ws1/css/theme-workshop.css?1711033591" rel="stylesheet">
     
     
 
-    <script src="/ws1/js/jquery-3.3.1.min.js?1711031470"></script>
+    <script src="/ws1/js/jquery-3.3.1.min.js?1711033591"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ws1/js/lunr.min.js?1711031470"></script>
-<script type="text/javascript" src="/ws1/js/auto-complete.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/lunr.min.js?1711033591"></script>
+<script type="text/javascript" src="/ws1/js/auto-complete.js?1711033591"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexeanred.github.io\/ws1\/\/vi";
     
 </script>
-<script type="text/javascript" src="/ws1/js/search.js?1711031470"></script>
+<script type="text/javascript" src="/ws1/js/search.js?1711033591"></script>
 
     
   </div>
@@ -1162,12 +1162,12 @@
 
 	<ol>
 <li>Ở console, trong thanh tìm kiếm, nhập <code>Translate</code>.
-<img alt="bathjob" src="/images/3.connect/001-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/001-batchTranslate.png"></li>
 <li>Trong giao diện Translate:
 <ul>
 <li>Chọn <strong>Batch translation</strong>.</li>
 <li>Chọn nút <strong>Create job</strong>.
-<img alt="bathjob" src="/images/3.connect/002-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/002-batchTranslate.png"></li>
 </ul>
 </li>
 <li>Trong <strong>Create Translate Job</strong>:
@@ -1175,7 +1175,7 @@
 <li>Ở mục <strong>Name</strong>, nhập <code>MyTranslateJob</code>.</li>
 <li>Chọn source language: <strong>English</strong>.</li>
 <li>Chọn target language: <strong>Vietnamese</strong>.
-<img alt="bathjob" src="/images/3.connect/003-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/003-batchTranslate.png"></li>
 </ul>
 </li>
 <li>Ở mục Input data:
@@ -1185,7 +1185,7 @@
 <li>Chọn dạng File format: <strong>Plain text (.txt)</strong>.</li>
 <li>Truy cập vào đường dẫn thư mục trong output bucket: <strong>s3://translate-job-batch-output-150903/output/</strong>.</li>
 <li>Dữ liệu của bạn đã được mã hóa mặc định.
-<img alt="bathjob" src="/images/3.connect/005-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/005-batchTranslate.png"></li>
 </ul>
 </li>
 <li>Ta phải cấp quyền cho Translate truy cập vào S3 buckets:
@@ -1195,22 +1195,22 @@
 <li>Nếu muốn cho tất cả buckets thì chọn <strong>Any S3 bucket</strong>.</li>
 <li>Đặt tên role name: <code>AllowAccessS3InputOutput</code></li>
 <li>Chọn nút <strong>Create job</strong>.
-<img alt="bathjob" src="/images/3.connect/006-batchTranslate.png">
+<img alt="bathjob" src="/ws1/images/3.connect/006-batchTranslate.png">
 
 <div class="notices warning" ><p>Nếu bạn đã chọn <strong>Create job</strong> và bị lỗi này thì do bạn chưa có file ở thư mục raw của input bucket. Bạn phải tải lên file cần dịch trước khi tạo job.</p>
 </div>
 
-<img alt="bathjob" src="/images/3.connect/007-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/007-batchTranslate.png"></li>
 </ul>
 </li>
 <li>Truy cập vào input bucket và vào thư mục raw, tải những file .txt bạn muốn dịch lên.
-<img alt="bathjob" src="/images/3.connect/008-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/008-batchTranslate.png"></li>
 <li>Nếu bạn đã tải file lên rồi mà vẫn lỗi thì đó là do trước đó bạn đã tạo IAM Role với tên đó rồi, để <strong>Create job</strong> thành công, bạn cần đặt tên role khác đi hoặc refresh lại trang để Translate biết role đã tồn tại và có thể sử dụng.
-<img alt="bathjob" src="/images/3.connect/009-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/009-batchTranslate.png"></li>
 <li>Sau khi bạn chọn <strong>Create job</strong> thì <strong>job sẽ ở trạng thái in progress</strong> cho đến khi hoàn thành job.
-<img alt="bathjob" src="/images/3.connect/010-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/010-batchTranslate.png"></li>
 <li>Bạn có thể xem trạng thái và các cấu hình ta đã làm khi bấm vào.
-<img alt="bathjob" src="/images/3.connect/011-batchTranslate.png"></li>
+<img alt="bathjob" src="/ws1/images/3.connect/011-batchTranslate.png"></li>
 </ol>
 
 <div class="notices note" ><p>Amazon Translate không tính tiền nếu bạn chọn cùng 1 ngôn ngữ cho &ldquo;source language&rdquo; và &ldquo;target language&rdquo;. Nếu bạn chọn chế độ &ldquo;auto&rdquo; tự động phát hiện ngôn ngữ thì bạn sẽ bị tính phí cho phần đó.</p>
@@ -1771,19 +1771,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ws1/js/clipboard.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.min.js?1711031470"></script>
-    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711031470"></script>
-    <script src="/ws1/js/jquery.sticky.js?1711031470"></script>
-    <script src="/ws1/js/featherlight.min.js?1711031470"></script>
-    <script src="/ws1/js/highlight.pack.js?1711031470"></script>
+    <script src="/ws1/js/clipboard.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.min.js?1711033591"></script>
+    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711033591"></script>
+    <script src="/ws1/js/jquery.sticky.js?1711033591"></script>
+    <script src="/ws1/js/featherlight.min.js?1711033591"></script>
+    <script src="/ws1/js/highlight.pack.js?1711033591"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711031470"></script>
-    <script src="/ws1/js/learn.js?1711031470"></script>
-    <script src="/ws1/js/hugo-learn.js?1711031470"></script>
+    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711033591"></script>
+    <script src="/ws1/js/learn.js?1711033591"></script>
+    <script src="/ws1/js/hugo-learn.js?1711033591"></script>
 
-    <link href="/ws1/mermaid/mermaid.css?1711031470" rel="stylesheet" />
-    <script src="/ws1/mermaid/mermaid.js?1711031470"></script>
+    <link href="/ws1/mermaid/mermaid.css?1711033591" rel="stylesheet" />
+    <script src="/ws1/mermaid/mermaid.js?1711033591"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
