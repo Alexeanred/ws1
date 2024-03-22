@@ -12,21 +12,21 @@
     <title>References and idea :: AWS Translate</title>
 
     
-    <link href="/ws1/css/nucleus.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/fontawesome-all.min.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/hybrid.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/featherlight.min.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/perfect-scrollbar.min.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/auto-complete.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/atom-one-dark-reasonable.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/theme.css?1711034402" rel="stylesheet">
-    <link href="/ws1/css/hugo-theme.css?1711034402" rel="stylesheet">
+    <link href="/ws1/css/nucleus.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/fontawesome-all.min.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/hybrid.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/featherlight.min.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/perfect-scrollbar.min.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/auto-complete.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/atom-one-dark-reasonable.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/theme.css?1711091148" rel="stylesheet">
+    <link href="/ws1/css/hugo-theme.css?1711091148" rel="stylesheet">
     
-    <link href="/ws1/css/theme-workshop.css?1711034402" rel="stylesheet">
+    <link href="/ws1/css/theme-workshop.css?1711091148" rel="stylesheet">
     
     
 
-    <script src="/ws1/js/jquery-3.3.1.min.js?1711034402"></script>
+    <script src="/ws1/js/jquery-3.3.1.min.js?1711091148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/ws1/js/lunr.min.js?1711034402"></script>
-<script type="text/javascript" src="/ws1/js/auto-complete.js?1711034402"></script>
+<script type="text/javascript" src="/ws1/js/lunr.min.js?1711091148"></script>
+<script type="text/javascript" src="/ws1/js/auto-complete.js?1711091148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/alexeanred.github.io\/ws1\/";
     
 </script>
-<script type="text/javascript" src="/ws1/js/search.js?1711034402"></script>
+<script type="text/javascript" src="/ws1/js/search.js?1711091148"></script>
 
     
   </div>
@@ -1176,9 +1176,22 @@
 </ul>
 <h3 id="idea">Idea</h3>
 <p>In the next workshop about Amazon Translate, we will learn and practice <strong>customize your translations</strong>.</p>
-<p>Also refer to this architecture to improve <strong>serverless translation</strong>.
+<ul>
+<li><strong>Disadvantages</strong> of serverless architecture in this article:
+<ul>
+<li>If the uploaded file is too large, around a few tens or hundreds of Kb, the translation results may be flawed. Because when all files after batching have been translated and put into the translated bucket, if a large file will be divided into many smaller files, when combine function trigger event to get the files to combine, the translated files may not be able to be translated. putting at the same time leads to only getting a few files, resulting in missing content.</li>
+</ul>
+</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Add to SQS queue so that when events upload to S3, it sends messages to SQS. Lambda will get information from those messages to process files at the same time.</li>
+<li>Add a Step Functions in the middle, create a Step Functions state machine to create a process, processing steps to combine with lambda to process files from S3 bucket.</li>
+</ul>
+</li>
+<li>Also refer to this architecture to improve <strong>serverless translation</strong>.
 <img alt="architecture-serverless" src="/ws1/images/future-arc-image.png">
-Additionally, we can combine with <strong>Amazon Polly</strong> to convert text-to-speech.</p>
+Additionally, we can combine with <strong>Amazon Polly</strong> to convert text-to-speech.</li>
+</ul>
 <p>Those are ideas for the next workshop about amazon translate.</p>
 
 
@@ -1723,19 +1736,19 @@ Additionally, we can combine with <strong>Amazon Polly</strong> to convert text-
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ws1/js/clipboard.min.js?1711034402"></script>
-    <script src="/ws1/js/perfect-scrollbar.min.js?1711034402"></script>
-    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711034402"></script>
-    <script src="/ws1/js/jquery.sticky.js?1711034402"></script>
-    <script src="/ws1/js/featherlight.min.js?1711034402"></script>
-    <script src="/ws1/js/highlight.pack.js?1711034402"></script>
+    <script src="/ws1/js/clipboard.min.js?1711091148"></script>
+    <script src="/ws1/js/perfect-scrollbar.min.js?1711091148"></script>
+    <script src="/ws1/js/perfect-scrollbar.jquery.min.js?1711091148"></script>
+    <script src="/ws1/js/jquery.sticky.js?1711091148"></script>
+    <script src="/ws1/js/featherlight.min.js?1711091148"></script>
+    <script src="/ws1/js/highlight.pack.js?1711091148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711034402"></script>
-    <script src="/ws1/js/learn.js?1711034402"></script>
-    <script src="/ws1/js/hugo-learn.js?1711034402"></script>
+    <script src="/ws1/js/modernizr.custom-3.6.0.js?1711091148"></script>
+    <script src="/ws1/js/learn.js?1711091148"></script>
+    <script src="/ws1/js/hugo-learn.js?1711091148"></script>
 
-    <link href="/ws1/mermaid/mermaid.css?1711034402" rel="stylesheet" />
-    <script src="/ws1/mermaid/mermaid.js?1711034402"></script>
+    <link href="/ws1/mermaid/mermaid.css?1711091148" rel="stylesheet" />
+    <script src="/ws1/mermaid/mermaid.js?1711091148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
